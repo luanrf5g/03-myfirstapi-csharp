@@ -1,13 +1,10 @@
 using _02_myfirstapi_c_.Communications.Requests;
 using _02_myfirstapi_c_.Communications.Responses;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
 
 namespace _02_myfirstapi_c_.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : MyFirstApiBaseController
     {
         [HttpGet]
         [Route("{id}")]
