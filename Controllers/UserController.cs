@@ -45,5 +45,25 @@ namespace _02_myfirstapi_c_.Controllers
         [HttpDelete]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Delete() { return NoContent(); }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
+        public IActionResult GetAll()
+        {
+            var response = new List<User>()
+            {
+                new User { Id = 1, Age = 23, Name = "Luan"},
+                new User { Id = 2, Age = 27, Name = "Sybirlen"}
+            };
+
+            return Ok(response);
+        }
+
+        [HttpPut("change-password")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult ChangePassword([FromBody] RequestChangePasswordJson request)
+        {
+            return NoContent();
+        }
     }
 }
