@@ -41,5 +41,9 @@ namespace _02_myfirstapi_c_.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Update([FromBody] RequestUpdateUserJson request) { return NoContent(); }
+
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult Delete() { return NoContent(); }
     }
 }
