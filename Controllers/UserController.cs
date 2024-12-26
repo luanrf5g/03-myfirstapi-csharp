@@ -1,4 +1,7 @@
+using _02_myfirstapi_c_.Communications.Requests;
+using _02_myfirstapi_c_.Communications.Responses;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace _02_myfirstapi_c_.Controllers
 {
@@ -20,6 +23,19 @@ namespace _02_myfirstapi_c_.Controllers
             };
 
             return Ok(response);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status201Created)]
+        public IActionResult Create([FromBody] RequestRegisterUserJson request)
+        {
+            var response = new ResponseRegisteredUserJson
+            {
+                Id = 1,
+                Name = request.Name
+            };
+
+            return Created(string.Empty, response);
         }
     }
 }
