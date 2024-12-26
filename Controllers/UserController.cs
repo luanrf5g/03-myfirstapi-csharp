@@ -37,5 +37,9 @@ namespace _02_myfirstapi_c_.Controllers
 
             return Created(string.Empty, response);
         }
+
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult Update([FromBody] RequestUpdateUserJson request) { return NoContent(); }
     }
 }
