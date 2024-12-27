@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\02-myfirstapi-c#.props" />
-</Project>
