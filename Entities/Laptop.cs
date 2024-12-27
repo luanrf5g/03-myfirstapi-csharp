@@ -17,4 +17,9 @@ public class Laptop : Device
 
     return "unknown";
   }
+
+  public override string Hello()
+  {
+    return "Hello World from Laptop";
+  }
 }
